@@ -1,0 +1,12 @@
+[package]
+name = "tcol"
+version = "0.1.0"
+edition = "2021"
+description = "tcol — теговая коллекция файлов: плоский теговый диск вместо папок. X-Query поиск, header-only scan."
+
+[dependencies]
+emlbox = { git = "https://github.com/kostyk348/mime-os", tag = "v0.1.0" }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
