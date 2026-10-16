@@ -1,5 +1,8 @@
 # tcol — теговая коллекция файлов
 
+[![Release](https://img.shields.io/github/v/release/kostyk348/tcol?sort=semver&color=blue)](https://github.com/kostyk348/tcol/releases)
+[![Last commit](https://img.shields.io/github/last-commit/kostyk348/tcol?branch=master)](https://github.com/kostyk348/tcol/commits/master)
+
 Плоский теговый диск вместо иерархии папок. Файлы остаются на месте; коллекция —
 это tagdb-записи (`.eml`), поиск по тегам через X-Query с **header-only scan**
 (тело файлов не читается при поиске).
@@ -19,22 +22,27 @@ cargo build --release   # ./target/release/tcol
 tcol init ~/.tcol
 
 # добавить файл с тегами (дубликаты перезаписываются, теги обновляются)
+
 tcol add ~/.tcol ./shaders/retro.glsl --tag shader --tag retro --tag mpv
 
 # добавить дерево целиком
+
 tcol add ~/.tcol ~/vita/homebrew --tag vita --tag homebrew --recursive
 
 # поиск: X-Query
+
 tcol find ~/.tcol 'X-Tag == "shader" AND X-Tag == "mpv"'
 tcol find ~/.tcol 'X-Tag != "game"'
 tcol find ~/.tcol 'X-Timestamp >= 1786500000'
 
 # вся коллекция, теги с счётчиками, статистика
+
 tcol ls ~/.tcol
 tcol tags ~/.tcol
 tcol stats ~/.tcol
 
 # удалить из коллекции (файл не трогается)
+
 tcol rm ~/.tcol ./shaders/retro.glsl
 ```
 
