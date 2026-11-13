@@ -1,11 +1,18 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="tcol banner" width="1000">
+
 # tcol — теговая коллекция файлов
+
+### Плоский теговый диск вместо иерархии папок.
 
 [![Release](https://img.shields.io/github/v/release/kostyk348/tcol?sort=semver&color=blue)](https://github.com/kostyk348/tcol/releases)
 [![Last commit](https://img.shields.io/github/last-commit/kostyk348/tcol?branch=master)](https://github.com/kostyk348/tcol/commits/master)
 
-Плоский теговый диск вместо иерархии папок. Файлы остаются на месте; коллекция —
-это tagdb-записи (`.eml`), поиск по тегам через X-Query с **header-only scan**
-(тело файлов не читается при поиске).
+</div>
+
+---
+
 
 Построен на [emlbox](https://github.com/kostyk348/mime-os) (single-file .eml
 контейнер + eml-tag).
